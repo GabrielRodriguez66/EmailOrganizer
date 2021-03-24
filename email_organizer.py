@@ -1,5 +1,8 @@
 import imapclient
-from credentials import EMAIL, PASSWORD
+import os
+
+EMAIL = os.environ.get('EMAIL')
+PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
 
 def organize_emails(old_folder, new_folder, search_keywords):
